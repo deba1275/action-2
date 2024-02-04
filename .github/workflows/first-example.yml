@@ -1,0 +1,16 @@
+name: My first workflow
+
+on: workflow_dispatch
+
+
+jobs:
+    first-job:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Welcome Message 
+            run: echo Very Welcome ${{github.action}}
+          - name: List files
+            run: ls -l
+          - name: Read file
+            run: cat README.md
+    
